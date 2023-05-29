@@ -4,7 +4,7 @@ const url="mongodb+srv://sauravkhambayate221:Saurav123@cluster0.d9nult5.mongodb.
 const  connect=async()=>{
     try{
       await  mongo.connect(url)
-      console.log("connected");
+      console.log("connected to database");
 
 
     }
