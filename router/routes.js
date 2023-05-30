@@ -5,7 +5,9 @@ const phoneController=require('../controller/mobile1')
 const padController=require('../controller/ipad1')
 const lapController=require('../controller/mackbook1');
 const accessController=require('../controller/accessories1')
-const order = require('../payment/payment')
+const order = require('../payment/payment');
+const {isAdmin, requireSignIn}  = require('../middleware/authMiddleware')
+const { registerController, loginController, testController,  } = require('../controller/authController');
 // const order=require('../payment/payment')
 route.get("/home",homeController.getHomeDetailsController);
 
@@ -19,5 +21,13 @@ route.get("/accessories",accessController.getAccesoriesDetailsController)
 
 route.post('/create/order',order.createOrder)
 route.post("/api/payment/verify",order.orderVerify)
+
+route.post('/register', registerController)
+
+// Login Route
+route.post('/login', loginController)
+
+// test Routes
+route.get('/test',requireSignIn, isAdmin,  testController)
 
 module.exports = route;
