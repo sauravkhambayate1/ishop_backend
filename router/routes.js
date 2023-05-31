@@ -8,6 +8,7 @@ const accessController=require('../controller/accessories1')
 const order = require('../payment/payment');
 const {isAdmin, requireSignIn}  = require('../middleware/authMiddleware')
 const { registerController, loginController, testController,  } = require('../controller/authController');
+const {getFeaturedProductsDetailsController} = require('../controller/featuredproducts');
 // const order=require('../payment/payment')
 route.get("/home",homeController.getHomeDetailsController);
 
@@ -29,5 +30,11 @@ route.post('/login', loginController)
 
 // test Routes
 route.get('/test',requireSignIn, isAdmin,  testController)
+
+// featured Products
+
+
+route.get('/', getFeaturedProductsDetailsController);
+// route.get("/:id",getFeaturedProductsDetailsByIdController)
 
 module.exports = route;

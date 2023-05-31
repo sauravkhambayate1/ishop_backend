@@ -7,10 +7,11 @@ const route=require('./router/routes');
 const cors=require("cors")
 const app=express();
 const connect=require('./database/db')
-
+const featuredproductsRouter = require('./router/routes');
 app.use(bodyparser.json())
 app.use(cors())
 app.use(route)
+app.use("/featuredproducts",featuredproductsRouter);
 // app.use(sign)
 
 app.listen(3001,()=>{
