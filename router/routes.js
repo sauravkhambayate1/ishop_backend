@@ -34,7 +34,7 @@ route.get('/test',requireSignIn, isAdmin,  testController)
 // featured Products
 
 
-route.get('/', getFeaturedProductsDetailsController);
+route.get('/featuredProduct', getFeaturedProductsDetailsController);
 // route.get("/:id",getFeaturedProductsDetailsByIdController)
 
 module.exports = route;
