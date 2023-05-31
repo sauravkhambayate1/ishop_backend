@@ -135,4 +135,4 @@ const getFeaturedProductsDetailsController=(req,res)=>{
     ])
 }
 
-module.exports = {getFeaturedProductsDetailsController}
+module.exports = {getFeaturedProductsDetailsController }
