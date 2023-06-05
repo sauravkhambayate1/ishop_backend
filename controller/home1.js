@@ -135,4 +135,36 @@ const getHomeDetailsController=(req,res)=>{
     ])
 }
 
-module.exports = {getHomeDetailsController}
+const featuredCarousel=(req,res)=>{
+  res.send([
+      {
+          "id":"44",
+          "image":"https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41yx-OTfNwL._SX300_SY300_QL70_FMwebp_.jpg"
+      },
+      {
+          "id":"45",
+          "image":"https://images-eu.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51mdp-NNhKL._AC_UL450_SR450,320_.jpg"
+      },
+      {
+          "id":"46",
+          "image":"https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61aasAbKvvL._AC_UL480_QL65_.jpg"
+      },
+      {
+          "id":"47",
+          "image":"https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/515jdxLlmaL._AC_UL480_QL65_.jpg"
+      },
+      {
+          "id":"48",
+          "image":"https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41iEc0hf6TL._SX300_SY300_QL70_FMwebp_.jpg"
+      },
+      {
+          "id":"49",
+          "image":"https://images-eu.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/G/31/img22/pc/desktops/02_Desktops_revamp_440x460.jpg"
+      },{
+          "id":"50",
+          "image":"https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61BmYbG18AL._AC_UL480_FMwebp_QL65_.jpg"
+      }
+  ])
+}
+
+module.exports = {getHomeDetailsController, featuredCarousel}

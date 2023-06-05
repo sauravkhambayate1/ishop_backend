@@ -32,7 +32,7 @@ route.post('/login', loginController)
 route.get('/test',requireSignIn, isAdmin,  testController)
 
 // featured Products
-
+route.get('/futureCarousel', homeController.featuredCarousel)
 
 route.get('/featuredProduct', getFeaturedProductsDetailsController);
 // route.get("/:id",getFeaturedProductsDetailsByIdController)
