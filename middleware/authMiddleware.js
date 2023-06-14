@@ -1,6 +1,5 @@
 const {userModel} = require('../model/userModel.js')
-// import userModel from '../models/userModel.js';
-const jet = require('jsonwebtoken')
+
 
 // Protected Routes token base
  const requireSignIn = async(req, res, next)=>{

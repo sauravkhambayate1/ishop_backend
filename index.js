@@ -11,7 +11,7 @@ const featuredproductsRouter = require('./router/routes');
 app.use(bodyparser.json())
 app.use(cors())
 app.use(route)
-app.use("/featuredproducts",featuredproductsRouter);
+app.use(featuredproductsRouter);
 // app.use(sign)
 
 app.listen(3001,()=>{
